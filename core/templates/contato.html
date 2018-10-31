@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block titulo  %} Contato {% endblock  %}
+
+{% block conteudo %}
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h3 align="center" class="display-8">Fale Conosco</h3>  
+    <br/>      
+    <form method="POST" novalidate>
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <div class="form-group">
+            {{ form.email.errors }}
+          <label for="exampleInputEmail1">Email</label>
+          <input type="email" name="email" class="form-control" id="exampleInputEmail1" required>
+        </div>
+
+        <div class="form-group">
+                {{ form.nome.errors }}
+          <label for="exampleInputPassword1">Nome</label>
+          <input type="text" name="nome" class="form-control" id="exampleInputPassword1" required>
+        </div>
+
+        <div class="form-group">
+                {{ form.mensagem.errors }}
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" class="form-control" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form> 
+  </div>
+</div>
+
+{% endblock conteudo %}
+

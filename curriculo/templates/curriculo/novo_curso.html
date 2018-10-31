@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block titulo  %}
+
+    {{ curso.sigla }}
+
+{% endblock  %}
+
+{% block conteudo  %}
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h3 align="center" class="display-8">Novo Curso</h3>  
+        <br/>
+    <form method = "POST" >
+        {% csrf_token %}
+
+        {{ form.as_p}}
+        <button type="submit" class="btn btn-primary">Salvar</button>
+
+    </form>
+    </div>
+</div>
+
+
+{% endblock  %}

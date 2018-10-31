@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo  %} Impacta {% endblock  %}
+
+{% block conteudo %}
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <div align="center">
+      <img src="{% static 'faculdade_impacta.png'%}" width="500"/>
+    </div>
+    <br/>
+    <br/>
+    <p class="lead">Fundada em 2003, a Faculdade Impacta é considerada uma das melhores instituições de tecnologia da América Latina devido ao seu intenso compromisso com a educação ao longo dos anos e à transformação da sociedade através da tecnologia.</p>
+    <p class="lead">Referência nas áreas de TI, Gestão e Design, a Impacta conta com cursos de Graduação, Pós-Graduação, Extensão, MBA e cursos técnicos que preparam seus alunos para os desafios do mercado de trabalho, além de um time de mestres e doutores com larga experiência profissional.</p>
+    <p class="lead">O alto nível de empregabilidade é uma das principais características da Faculdade Impacta, que é reconhecida pelas maiores empresas do País, em que seus alunos garantem posições de destaque no mercado de trabalho após o término do curso.</p>
+    <p class="lead">A Instituição ainda conta com infraestrutura moderna, avaliação positiva do MEC, cursos estrelados no Guia do Estudante e parcerias estratégicas com grandes empresas para oferecer a melhor formação para os alunos.</p>
+  </div>
+</div>
+{% endblock conteudo %}
